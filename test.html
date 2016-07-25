@@ -4,14 +4,16 @@
 </body>
 <script>
 
-var maximum = 100.0;
-var minimum = 0.0;
+function myOnLoad() {
+  var maximum = 100.0;
+  var minimum = 0.0;
+  var value = parseFloat(Math.random() * (maximum - minimum + 1) + minimum).toFixed(2);
 
-function getNumber() {
-  return parseFloat(Math.random() * (maximum - minimum + 1) + minimum).toFixed(2);
+  document.getElementById("#price").innerHTML = "$" + value;
+	
 }
 
-document.getElementById("#price").innerHTML = "$" + getNumber();
+window.onload = myOnLoad();
 
 </script>
 </html>
