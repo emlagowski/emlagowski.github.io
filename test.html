@@ -4,11 +4,11 @@
 </body>
 <script>
 
-var maximum = 100;
-var minimum = 0;
+var maximum = 100.0;
+var minimum = 0.0;
 
 function getNumber() {
-  return Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+  return parseFloat(Math.random() * (maximum - minimum + 1) + minimum).toFixed(2);
 }
 
 document.getElementById("#price").innerHTML = "$" + getNumber();
