@@ -1,5 +1,17 @@
 <html>
 <body>
-$5.11
+<div id="#price">$0.00</div>
 </body>
+<script>
+
+var maximum = 100;
+var minimum = 0;
+
+function getNumber() {
+  return Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+}
+
+document.getElementById("#price").innerHTML = "$" + getNumber();
+
+</script>
 </html>
