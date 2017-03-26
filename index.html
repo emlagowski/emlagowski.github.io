@@ -13,6 +13,28 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			
+			ga('create', 'UA-96247537-1', 'auto');
+			ga('send', 'pageview');
+			
+			/**
+			  * Funkcja śledząca kliknięcie linku wychodzącego w Analytics.
+			  * Ta funkcja wykorzystuje prawidłowy URL jako argument i używa go
+			  * jako etykiety zdarzenia. Wybranie metody transportu 'beacon' umożliwia wysłanie działania
+			  * za pomocą 'navigator.sendBeacon' w obsługiwanej przeglądarce.
+			  */
+			var trackOutboundLink = function(url) {
+			   ga('send', 'event', 'outbound', 'click', url, {
+			     'transport': 'beacon',
+			     'hitCallback': function(){document.location = url;}
+			   });
+			}
+		</script>
 	</head>
 	<body class="loading">
 		<div id="wrapper">
@@ -26,11 +48,11 @@
 						<p>Software Developer &nbsp;&bull;&nbsp; Java backend coder &nbsp;&bull;&nbsp; Mobile development enthusiast</p>
 						<nav>
 							<ul>
-								<li><a href="https://pl.linkedin.com/in/marcinlagowski" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-								<li><a href="http://stackoverflow.com/users/3233685/marcin-lagowski" class="icon fa-stack-overflow"><span class="label">StackOverflow</span></a></li>
-								<li><a href="https://github.com/emlagowski" class="icon fa-github"><span class="label">Github</span></a></li>
-								<li><a href="mailto:marcinlagowski92@gmail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-								<li><a href="assets/marcin_lagowski_cv.pdf" class="icon fa-file-pdf-o"><span class="label">CV</span></a></li>
+								<li><a href="https://pl.linkedin.com/in/marcinlagowski" onclick="trackOutboundLink('https://pl.linkedin.com/in/marcinlagowski'); return false;" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="http://stackoverflow.com/users/3233685/marcin-lagowski" onclick="trackOutboundLink('http://stackoverflow.com/users/3233685/marcin-lagowski'); return false;" class="icon fa-stack-overflow"><span class="label">StackOverflow</span></a></li>
+								<li><a href="https://github.com/emlagowski" onclick="trackOutboundLink('https://github.com/emlagowski'); return false;" class="icon fa-github"><span class="label">Github</span></a></li>
+								<li><a href="mailto:marcinlagowski92@gmail.com" onclick="trackOutboundLink('mailto:marcinlagowski92@gmail.com'); return false;" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+								<li><a href="assets/marcin_lagowski_cv.pdf" onclick="trackOutboundLink('assets/marcin_lagowski_cv.pdf'); return false;" class="icon fa-file-pdf-o"><span class="label">CV</span></a></li>
 							</ul>
 						</nav>
 					</header>
@@ -47,15 +69,6 @@
 			window.onload = function() { document.body.className = ''; }
 			window.ontouchmove = function() { return false; }
 			window.onorientationchange = function() { document.body.scrollTop = 0; }
-		</script>
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-		  ga('create', 'UA-96247537-1', 'auto');
-		  ga('send', 'pageview');
 		</script>
 	</body>
 </html>
