@@ -13,41 +13,6 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-			
-			ga('create', 'UA-96247537-1', 'auto');
-			ga('send', 'pageview');
-			
-			/**
-			  * Funkcja śledząca kliknięcie linku wychodzącego w Analytics.
-			  * Ta funkcja wykorzystuje prawidłowy URL jako argument i używa go
-			  * jako etykiety zdarzenia. Wybranie metody transportu 'beacon' umożliwia wysłanie działania
-			  * za pomocą 'navigator.sendBeacon' w obsługiwanej przeglądarce.
-			  */
-			var trackOutboundLink = function(url) {
-			   ga('send', 'event', 'outbound', 'click', url, {
-			     'transport': 'beacon',
-			     'hitCallback': function() {
-					 document.location = url;
-					}
-			   });
-			}
-		</script>
-		<script>
-			<!-- Hotjar Tracking Code for http://emlagowski.github.io -->
-    			(function(h,o,t,j,a,r){
-        			h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        			h._hjSettings={hjid:1227657,hjsv:6};
-        			a=o.getElementsByTagName('head')[0];
-        			r=o.createElement('script');r.async=1;
-        			r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        			a.appendChild(r);
-    			})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-		</script>
 	</head>
 	<body class="loading">
 		<div id="wrapper">
@@ -61,12 +26,11 @@
 						<p>Software Engineer &nbsp;&bull;&nbsp; DevOps &nbsp;&bull;&nbsp; Mobile development enthusiast</p>
 						<nav>
 							<ul>
-								<li><a href="https://pl.linkedin.com/in/marcinlagowski" onclick="trackOutboundLink('https://pl.linkedin.com/in/marcinlagowski'); return false;" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-								<li><a href="http://stackoverflow.com/users/3233685/marcin-lagowski" onclick="trackOutboundLink('http://stackoverflow.com/users/3233685/marcin-lagowski'); return false;" class="icon fa-stack-overflow"><span class="label">StackOverflow</span></a></li>
-								<li><a href="https://github.com/emlagowski" onclick="trackOutboundLink('https://github.com/emlagowski'); return false;" class="icon fa-github"><span class="label">GitHub</span></a></li>
-								<!-- <li><a href="https://gitlab.com/emlagowski" onclick="trackOutboundLink('https://gitlab.com/emlagowski'); return false;" class="icon fa-gitlab"><span class="label">GitLab</span></a></li> -->
-								<li><a href="mailto:marcinlagowski92@gmail.com" onclick="trackOutboundLink('mailto:marcinlagowski92@gmail.com'); return false;" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-								<li><a href="https://github.com/emlagowski/cv/releases/latest/download/marcin_lagowski_cv.pdf " target="pdf-frame" onclick="trackOutboundLink('https://github.com/emlagowski/cv/releases/latest/download/marcin_lagowski_cv.pdf '); return false;" class="icon fa-file-pdf-o"><span class="label">CV</span></a></li>
+								<li><a href="https://pl.linkedin.com/in/marcinlagowski" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="http://stackoverflow.com/users/3233685/marcin-lagowski" class="icon fa-stack-overflow"><span class="label">StackOverflow</span></a></li>
+								<li><a href="https://github.com/emlagowski" class="icon fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="mailto:marcinlagowski92@gmail.com"  class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+								<li><a href="https://github.com/emlagowski/cv/releases/latest/download/marcin_lagowski_cv.pdf" class="icon fa-file-pdf-o"><span class="label">CV</span></a></li>
 							</ul>
 						</nav>
 					</header>
@@ -75,7 +39,6 @@
 					<footer id="footer">
 						<span class="copyright">&copy; Marcin Łagowski. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
 					</footer>
-
 			</div>
 		</div>
 		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
